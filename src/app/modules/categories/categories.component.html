@@ -1,0 +1,29 @@
+<div class="box">
+    <h1 class="title is-2">
+        Categories
+    </h1>
+</div>
+<ng-container *ngIf="categories$ | async as categories">
+    <app-card *ngFor="let category of categories">
+        <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png"
+                  alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                {{ category.name}}
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">Say</a>
+            </footer>
+          </div>          
+    </app-card>
+</ng-container>
+<!-- <div>{{ categories$ | async | json }}</div> -->
+
+<app-card></app-card>
+<app-card></app-card>

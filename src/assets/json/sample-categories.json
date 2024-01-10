@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Food",
+    "cards": [
+      {
+        "name": "Pizza",
+        "image": "pizza.jpg",
+        "sound": "pizza_sound.mp3"
+      },
+      {
+        "name": "Burger",
+        "image": "burger.jpg",
+        "sound": "burger_sound.mp3"
+      },
+      {
+        "name": "Ice Cream",
+        "image": "ice_cream.jpg",
+        "sound": "ice_cream_sound.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Place",
+    "cards": [
+      {
+        "name": "Beach",
+        "image": "beach.jpg",
+        "sound": "beach_sound.mp3"
+      },
+      {
+        "name": "Park",
+        "image": "park.jpg",
+        "sound": "park_sound.mp3"
+      },
+      {
+        "name": "City",
+        "image": "city.jpg",
+        "sound": "city_sound.mp3"
+      }
+    ]
+  },
+  {
+    "name": "Play",
+    "cards": [
+      {
+        "name": "Ball",
+        "image": "ball.jpg",
+        "sound": "ball_sound.mp3"
+      },
+      {
+        "name": "Toy",
+        "image": "toy.jpg",
+        "sound": "toy_sound.mp3"
+      },
+      {
+        "name": "Game",
+        "image": "game.jpg",
+        "sound": "game_sound.mp3"
+      }
+    ]
+  }
+]
