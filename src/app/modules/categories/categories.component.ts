@@ -5,6 +5,7 @@ import { CategoriesService } from './categories.service';
 import { Observable, Subscription } from 'rxjs';
 import { Card } from '../../core/interface/card';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { SpeechSynthesisService } from '../../core/services/speech-synthesis.service';
 
 @Component({
   selector: 'app-categories',
@@ -15,7 +16,8 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 })
 export class CategoriesComponent implements OnInit, OnDestroy {
 
-  constructor(private service: CategoriesService, private route: ActivatedRoute) {}
+  constructor(private service: CategoriesService, private route: ActivatedRoute,
+    private speechService: SpeechSynthesisService) {}
 
   category$: Observable<Card> = this.service.category$;
 
@@ -38,6 +40,10 @@ export class CategoriesComponent implements OnInit, OnDestroy {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
+  }
+
+  say(card: Card) {
+    this.speechService.play(card.name);
   }
 
 }
