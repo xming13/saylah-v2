@@ -1,0 +1,28 @@
+<ng-container *ngIf="category$ | async as category">
+    <div class="box">
+        <h1 class="title is-2 center-text">
+            {{ category.name }}
+        </h1>
+    </div>
+    <app-card *ngFor="let card of category.cards">
+        <div class="card">
+            <div class="card-image">
+                <a href="#" [routerLink]="['', card.code]">
+                  <img src="../../../assets/img/1280x960.png"
+                    class="center-img"
+                    width="224" height="56"
+                    alt="Placeholder image">
+                </a>
+            </div>
+            <div class="card-content">
+              <div class="content center-text">
+                {{ card.name}}
+              </div>
+            </div>
+            <footer class="card-footer">
+              <button (click)="say(card)" class="button is-primary is-light card-footer-item">Say</button>
+            </footer>
+        </div>          
+    </app-card>
+</ng-container>
+<!-- <div>{{ category$ | async | json }}</div> -->
