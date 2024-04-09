@@ -6,10 +6,13 @@
     </div>
     <app-card *ngFor="let card of category.cards">
         <div class="card">
+            <br>
+            <br>
             <div class="card-image">
                 <a href="#" [routerLink]="['', card.code]">
-                  <img src="../../../assets/img/1280x960.png"
+                  <img src="https://source.unsplash.com/featured/?{{card.code}}"
                     class="center-img"
+                    loading="lazy"
                     width="224" height="56"
                     alt="Placeholder image">
                 </a>
@@ -26,3 +29,6 @@
     </app-card>
 </ng-container>
 <!-- <div>{{ category$ | async | json }}</div> -->
+
+<!-- <sgds-button (click)="showAlert()">Hello</sgds-button> -->
+<!-- <sgds-alert #alert [show]="alertShowState">Alerting</sgds-alert> -->
