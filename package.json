@@ -21,6 +21,10 @@
     "@angular/platform-server": "^17.0.0",
     "@angular/router": "^17.0.0",
     "@angular/ssr": "^17.0.6",
+    "@govtechsg/sgds": "^2.2.0",
+    "@govtechsg/sgds-web-component": "^1.1.0",
+    "@webcomponents/scoped-custom-element-registry": "^0.0.9",
+    "bootstrap-icons": "^1.11.3",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -40,5 +44,8 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.2.2"
+  }
+}
+ript": "~5.2.2"
   }
 }
