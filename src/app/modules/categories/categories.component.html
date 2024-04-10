@@ -4,7 +4,8 @@
             {{ category.name }}
         </h1>
     </div>
-    <app-card *ngFor="let card of category.cards">
+    <ng-container *ngIf="category.cards?.length; else empty">
+      <app-card *ngFor="let card of category.cards">
         <div class="card">
             <br>
             <br>
@@ -27,6 +28,11 @@
             </footer>
         </div>          
     </app-card>
+    </ng-container>
+    <ng-template #empty>
+      <h1>Oooops this space is empty</h1>
+      <sgds-button slot="end" (click)="back()">Go back</sgds-button>
+    </ng-template>
 </ng-container>
 <!-- <div>{{ category$ | async | json }}</div> -->
 

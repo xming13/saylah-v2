@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { CategoriesService } from './categories.service';
 import { Observable, Subscription } from 'rxjs';
 import { Card } from '../../core/interface/card';
@@ -20,7 +20,7 @@ import { SgdsAlert } from '@govtechsg/sgds-web-component/components/Alert/sgds-a
 export class CategoriesComponent implements OnInit, OnDestroy {
 
   constructor(private service: CategoriesService, private route: ActivatedRoute,
-    private speechService: SpeechSynthesisService) {}
+    private speechService: SpeechSynthesisService, private location: Location) {}
 
   @ViewChild('alert')
   alert? : ElementRef<SgdsAlert>;
@@ -59,4 +59,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
     this.speechService.play(card.name);
   }
 
+  back() {
+    this.location.back();
+  }
 }
