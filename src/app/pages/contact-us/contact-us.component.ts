@@ -2,11 +2,12 @@ import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { TeaserComponent } from '../../components/teaser/teaser.component';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  imports: [NavbarComponent, TeaserComponent, ReactiveFormsModule],
+  imports: [NavbarComponent, TeaserComponent, ReactiveFormsModule, CommonModule],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
