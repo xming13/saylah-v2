@@ -82,5 +82,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 See [guide](https://docs.amplify.aws/javascript/tools/cli/start/set-up-cli/#configure-the-amplify-cli) for Angular development with AWS amplify.
 
 ### Access key / secret
-AKIAQTAYGEXL4M2MLBFV / 15DUM+mCRtjSTOcpHrygazPptEoW6XtNaFKdH/p4
-AKIAQTAYGEXLYY4AWNH3 / esRE+uk1hhf1+HeQAoXmh6jIyJZ9CDXJqMtPEM7A
+`removed`
