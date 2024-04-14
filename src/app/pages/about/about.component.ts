@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
-import { TeaserComponent } from '../../modules/teaser/teaser.component';
+import { TeaserComponent } from '../../components/teaser/teaser.component';
 
 @Component({
   selector: 'app-about',
