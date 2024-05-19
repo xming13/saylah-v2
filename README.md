@@ -81,5 +81,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### AWS amplify
 See [guide](https://docs.amplify.aws/javascript/tools/cli/start/set-up-cli/#configure-the-amplify-cli) for Angular development with AWS amplify.
 
-### Access key / secret
+### IAM Access key / secret
 `removed`
+
+### Amplify commnads
+1. `amplify init`
+2. `amplify configure`
+3. `amplify env list` | `amplify env pull` | `amplify env remove`
