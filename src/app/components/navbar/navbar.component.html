@@ -16,5 +16,6 @@
   </sgds-mainnav-dropdown>
   <sgds-mainnav-item href="/contact-us" slot="end">Contact Us</sgds-mainnav-item>
   <sgds-button slot="end" (click)="login()">Login</sgds-button>
+  <ng-content slot="end" select="sgds-button.sign-out"></ng-content>
   <dev-console-widget slot="non-collapsible" iconcolor="black" iconwidth="28px" iconheight="28px"></dev-console-widget>
 </sgds-mainnav>

@@ -21,6 +21,7 @@
     "@angular/platform-server": "^17.0.0",
     "@angular/router": "^17.0.0",
     "@angular/ssr": "^17.0.6",
+    "@aws-amplify/ui-angular": "^5.0.16",
     "@govtechsg/sgds": "^2.2.0",
     "@govtechsg/sgds-web-component": "^1.1.0",
     "@webcomponents/scoped-custom-element-registry": "^0.0.9",
