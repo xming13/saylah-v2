@@ -6,7 +6,7 @@ input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONL
 type Card @model
 @auth(rules: [
   { allow: owner, ownerField: "owner", operations: [create, update, delete] },
-  { allow: private, provider: iam, operations: [read, create, update, delete] },
+  { allow: private, operations: [read, create, update, delete] },
   { allow: public, operations: [read] },
 ])
 {
@@ -24,9 +24,9 @@ type Card @model
 
 # Dimensions for the card
 type Interface @model
-@authorize(rules: [
+@auth(rules: [
   { allow: owner, ownerField: "owner", operations: [create, update, delete] },
-  { allow: private, provider: iam, operations: [read, create, update, delete] },
+  { allow: private, operations: [read, create, update, delete] },
   { allow: public, operations: [read] }
 ])
 {
@@ -44,7 +44,7 @@ type Interface @model
 type Template @model
 @auth(rules: [
   { allow: owner, ownerField: "owner", operations: [create, update, delete] },
-  { allow: private, provider: iam, operations: [read, create, update, delete] },
+  { allow: private, operations: [read, create, update, delete] },
   { allow: public, operations: [read] },
 ])
 {
@@ -58,7 +58,7 @@ type Template @model
 type SavedInterface @model
 @auth(rules: [
   { allow: owner, ownerField: "owner", operations: [create, update, delete] },
-  { allow: private, provider: iam, operations: [read, create, update, delete] },
+  { allow: private, operations: [read, create, update, delete] },
   { allow: public, operations: [read] },
 ])
 {
@@ -72,7 +72,7 @@ type SavedInterface @model
 type Setting @model
 @auth(rules: [
   { allow: owner, ownerField: "owner", operations: [create, update, delete] },
-  { allow: private, provider: iam, operations: [read, create, update, delete] },
+  { allow: private, operations: [read, create, update, delete] },
   { allow: public, operations: [read] },
 ])
 {
