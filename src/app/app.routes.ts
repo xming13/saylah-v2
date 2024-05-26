@@ -5,6 +5,8 @@ import { EditComponent } from './pages/edit/edit.component';
 import { AboutComponent } from './pages/about/about.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { SavedInterfacesComponent } from './pages/saved-interfaces/saved-interfaces.component';
+import { TemplatesComponent } from './pages/templates/templates.component';
 
 export const routes: Routes = [
 
@@ -31,6 +33,14 @@ export const routes: Routes = [
    {
       path: 'settings',
       component: SettingsComponent
+   },
+   {
+      path: 'saved-interfaces',
+      component: SavedInterfacesComponent
+   },
+   {
+      path: 'templates',
+      component: TemplatesComponent
    },
    {
       path: ':id',

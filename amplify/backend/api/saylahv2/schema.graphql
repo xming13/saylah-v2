@@ -11,4 +11,23 @@ type Card @model {
   sound: String
   cards: [Card] @hasMany
   card: Card @belongsTo
+  template: Card @belongsTo
+}
+
+# Dimensions for the card
+type Interface @model {
+  id: ID!
+  name: String!
+  gridSizePortraitX: String!
+  gridSizePortraitY: String!
+  gridSizeLandscapeX: String!
+  gridSizeLandscapeY: String!
+  FontSize: String!
+}
+
+# Group of cards
+type Template @model {
+  id: ID!
+  name: String!
+  cards: [Card] @hasMany
 }

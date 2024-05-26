@@ -3,11 +3,12 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { TeaserComponent } from '../../components/teaser/teaser.component';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  imports: [NavbarComponent, TeaserComponent, ReactiveFormsModule, CommonModule],
+  imports: [NavbarComponent, TeaserComponent, ReactiveFormsModule, CommonModule, FooterComponent],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

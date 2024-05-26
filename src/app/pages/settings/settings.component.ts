@@ -3,11 +3,12 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { TeaserComponent } from '../../components/teaser/teaser.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-settings',
   standalone: true,
-  imports: [NavbarComponent, TeaserComponent, CommonModule, FormsModule],
+  imports: [NavbarComponent, TeaserComponent, CommonModule, FormsModule, FooterComponent],
   templateUrl: './settings.component.html',
   styleUrl: './settings.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
