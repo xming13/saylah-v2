@@ -18,10 +18,6 @@ import { CommonModule } from '@angular/common';
 })
 export class EditComponent implements OnInit {
 
-  onLogout() {
-    this.isLoggedIn = false;
-  }
-
   isLoggedIn: boolean = false;
 
   constructor(public authenticator: AuthenticatorService) {
@@ -29,6 +25,10 @@ export class EditComponent implements OnInit {
 
   ngOnInit(): void {
     this.checkAuthStatus();
+  }
+
+  onLogout() {
+    this.isLoggedIn = false;
   }
 
   async checkAuthStatus() {
