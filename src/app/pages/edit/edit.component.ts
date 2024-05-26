@@ -35,6 +35,9 @@ export class EditComponent implements OnInit {
     try {
       const user = await this.authenticator.authStatus;
       this.isLoggedIn = !!user;
+      if (user === "unauthenticated") {
+        this.isLoggedIn = false;
+      }
     } catch (error) {
       this.isLoggedIn = false;
     }

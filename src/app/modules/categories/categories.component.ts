@@ -62,8 +62,4 @@ export class CategoriesComponent implements OnInit, OnDestroy {
   back() {
     this.location.back();
   }
-
-  create() {
-    alert("Coming soon!");
-  }
 }
