@@ -142,7 +142,8 @@ export class EditCardsComponent implements OnInit, OnDestroy {
         query: mutations.createCard,
         variables: {
           input: card
-        }
+        },
+        authMode: 'userPool'
       });
       console.log('card created!', response);
       this.createForm.reset();
@@ -157,7 +158,8 @@ export class EditCardsComponent implements OnInit, OnDestroy {
             query: mutations.deleteCard,
             variables: {
                 input: { id: cardId }
-            }
+            },
+            authMode: 'userPool'
         });
         console.log('card deleted!', response);
       } catch (e) {
@@ -172,7 +174,8 @@ export class EditCardsComponent implements OnInit, OnDestroy {
               query: mutations.updateCard,
               variables: {
                   input: card
-              }
+              },
+              authMode: 'userPool'
           });
           console.log('card updated!', response);
       } catch (e) {
