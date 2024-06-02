@@ -37,7 +37,7 @@ type Interface @model
   gridSizeLandscapeX: String!
   gridSizeLandscapeY: String!
   FontSize: String!
-  owner: String
+  owner: String!
 }
 
 # Group of cards
@@ -51,7 +51,7 @@ type Template @model
   id: ID!
   name: String!
   cards: [Card] @hasMany
-  owner: String
+  owner: String!
 }
 
 # Group of Interfaces
@@ -65,7 +65,7 @@ type SavedInterface @model
   id: ID!
   name: String!
   interfaces: [Interface] @hasMany
-  owner: String
+  owner: String!
 }
 
 # Setting
@@ -83,5 +83,5 @@ type Setting @model
   gridSizeLandscape: String!
   fontSize: String!
   theme: String!
-  owner: String
+  owner: String!
 }
