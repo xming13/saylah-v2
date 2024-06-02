@@ -1,17 +1,9 @@
 {
-  "projectName": "saylahv2",
-  "version": "3.1",
   "frontend": "javascript",
   "javascript": {
-    "framework": "angular",
+    "framework": "none",
     "config": {
-      "SourceDir": "src",
-      "DistributionDir": "dist/saylah-v2/browser",
-      "BuildCommand": "npm.cmd run-script build",
-      "StartCommand": "ng serve"
+      "SourceDir": "amplify-codegen-temp"
     }
-  },
-  "providers": [
-    "awscloudformation"
-  ]
+  }
 }

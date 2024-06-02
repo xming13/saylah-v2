@@ -11,6 +11,7 @@ import { DeleteCardPopupComponent } from './delete-card-popup/delete-card-popup.
 import { UpdateCardPopupComponent } from './update-card-popup/update-card-popup.component';
 import { RouterModule } from '@angular/router';
 import { SpeechSynthesisService } from '../../core/services/speech-synthesis.service';
+import { getCurrentUser } from 'aws-amplify/auth';
 
 @Component({
   selector: 'app-edit-cards',
@@ -56,9 +57,19 @@ export class EditCardsComponent implements OnInit, OnDestroy {
 
   async ngOnInit() {
     try {
+      const { username, userId, signInDetails } = await getCurrentUser();
       const response = await this.client.graphql({
-        query: queries.listCards
+        query: queries.listCards,
+        authMode: 'userPool',
+        variables: {
+          filter: {
+            owner: {
+              eq: username
+            }
+          }
+        }
       });
+      console.log("username - 2: " + username);
       this.cards = response.data.listCards;
       this.filteredCards = this.cards.items;
     } catch (e) {
@@ -138,6 +149,8 @@ export class EditCardsComponent implements OnInit, OnDestroy {
 
   public async onCreate(card: Card) {
     try {
+      const { username, userId, signInDetails } = await getCurrentUser();
+      card.owner = username;
       const response = await this.client.graphql({
         query: mutations.createCard,
         variables: {

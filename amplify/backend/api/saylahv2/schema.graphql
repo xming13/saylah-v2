@@ -19,7 +19,7 @@ type Card @model
   cards: [Card] @hasMany
   card: Card @belongsTo
   template: Card @belongsTo
-  owner: String
+  owner: String!
 }
 
 # Dimensions for the card

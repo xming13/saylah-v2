@@ -1,0 +1,3 @@
+[33m[39m
+[33m⚠️  WARNING: your GraphQL API currently allows public create, read, update, and delete access to all models via an API Key. To configure PRODUCTION-READY authorization rules, review: https://docs.amplify.aws/cli/graphql/authorization-rules[39m
+[33m[39m
