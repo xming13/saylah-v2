@@ -3,10 +3,10 @@
     <div class="menu-icon">
       <button class="menu-button" (click)="toggleMenu()">☰</button>
       <div class="submenu" [class.show]="isMenuOpen">
-        <a href="#">About SayLah!✌🏼</a>
-        <a href="#">Edit</a>
-        <a href="#">Settings</a>
-        <a href="#">Logout</a>
+        <a routerLink="/home">About SayLah!✌🏼</a>
+        <a href="/edit">Edit</a>
+        <a href="/settings">Settings</a>
+        <a href="/home">Logout</a>
       </div>
     </div>
     <div class="app-name">SayLah!✌🏼</div>
