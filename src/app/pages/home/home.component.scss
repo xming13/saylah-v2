@@ -160,20 +160,26 @@
   
     .main-content {
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       width: auto;
+      height: 100vh; /* Ensure it takes up the full height */
     }
   
     .scrollable-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Make grid responsive */
       gap: 20px;
+      overflow-y: auto;
+      height: 100%; /* Ensure it takes up the available vertical space */
       margin-right: 40px;
+      flex: 1; /* Ensure it takes up remaining space */
     }
   
     .actions {
       flex-direction: column;
       align-items: flex-start;
+      height: 100%; /* Ensure it takes up the full height */
+      flex-shrink: 0; /* Prevent it from shrinking */
     }
   
     .action-item {
