@@ -251,13 +251,15 @@
       align-items: center;
       justify-content: flex-start;
       width: 100%;
+      height: calc(100vh - 50px); /* Adjust to take full height minus the header */
     }
   
     .scrollable-grid {
       flex: 1;
       width: 100%;
-      max-height: 50vh;
+      max-height: calc(100vh - 150px); /* Adjust to take full height minus the header and actions */
       margin-bottom: 20px;
+      overflow-y: auto; /* Ensure the content is scrollable */
     }
   
     .actions {
