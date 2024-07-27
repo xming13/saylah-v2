@@ -1,10 +1,53 @@
-<app-navbar></app-navbar>
-<div class="columns is-multiline is-mobile">
-  <div class="column is-half">
-    <app-categories></app-categories>
+<div class="container">
+  <div class="header">
+    <div class="menu-icon">
+      <button class="menu-button" (click)="toggleMenu()">☰</button>
+      <div class="submenu" [class.show]="isMenuOpen">
+        <a href="#">About SayLah!✌🏼</a>
+        <a href="#">Edit</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+    <div class="app-name">SayLah!✌🏼</div>
   </div>
-  <div class="column is-half">
-    <app-actions></app-actions>
+  <div class="main-content">
+    <div class="grid">
+      <div class="grid-item">
+        <img src="assets/img/food.png" alt="Food" />
+        <div>Food</div>
+      </div>
+      <div class="grid-item">
+        <img src="assets/img/place.png" alt="Place" />
+        <div>Place</div>
+      </div>
+      <div class="grid-item">
+        <img src="assets/img/play.png" alt="Play" />
+        <div>Play</div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="action-item">
+        <img src="assets/img/yes.png" alt="Yes" />
+        <div>Yes</div>
+      </div>
+      <div class="action-item">
+        <img src="assets/img/no.png" alt="No" />
+        <div>No</div>
+      </div>
+      <div class="action-item">
+        <img src="assets/img/help.png" alt="Help" />
+        <div>Help</div>
+      </div>
+    </div>
+  </div>
+  <div class="mini-taskbar" [class.show]="isMenuOpen" (click)="toggleMenu()">
+    <div class="menu-button">☰</div>
+    <div class="submenu">
+      <a routerLink="/home">About SayLah!✌🏼</a>
+      <a href="/edit">Edit</a>
+      <a href="/settings">Settings</a>
+      <a href="/home">Logout</a>
+    </div>
   </div>
 </div>
-<app-footer></app-footer>

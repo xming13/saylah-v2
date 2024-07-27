@@ -7,12 +7,16 @@ import { LoginComponent } from './pages/login/login.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { SavedInterfacesComponent } from './pages/saved-interfaces/saved-interfaces.component';
 import { TemplatesComponent } from './pages/templates/templates.component';
+import { LandingComponent } from './pages/landing/landing.component';
 
 export const routes: Routes = [
-
    {
       path: '',
       component: HomeComponent
+   },
+   {
+      path: 'home',
+      component: LandingComponent
    },
    {
       path: 'about',
@@ -41,10 +45,6 @@ export const routes: Routes = [
    {
       path: 'templates',
       component: TemplatesComponent
-   },
-   {
-      path: ':id',
-      component: HomeComponent
    },
    { path: '', redirectTo: '', pathMatch: 'full' },
    { path: '**', redirectTo: '', pathMatch: 'full' }
