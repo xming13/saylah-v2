@@ -10,7 +10,7 @@ import { getCurrentUser } from 'aws-amplify/auth';
   providedIn: 'root'
 })
 export class CardApiService {
-  private client: Client;
+  private client!: Client;
 
   constructor() {
     this.client = generateClient();

@@ -90,6 +90,7 @@
     padding: 10px;
     text-align: center;
     border: 2px dotted #000; /* Changed border to dotted */
+    cursor: pointer;
   }
   
   .grid-item img {
@@ -114,6 +115,7 @@
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
   }
   
   .action-item img {
