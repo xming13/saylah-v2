@@ -1,21 +1,22 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { Card } from '../../../API';
 import { CardApiService } from '../../core/services/card-api.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-edit',
   standalone: true,
   imports: [
     CommonModule,
     RouterModule
   ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  templateUrl: './edit.component.html',
+  styleUrl: './edit.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class HomeComponent implements OnInit {
+export class EditComponent {
+
   isMenuOpen = false;
   cards: Card[] = [];
 
@@ -23,11 +24,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadCards();
-  }
-  
-  readText(text: string) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    window.speechSynthesis.speak(utterance);
   }
 
   async loadCards() {

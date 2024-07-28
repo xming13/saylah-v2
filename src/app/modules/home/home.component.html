@@ -4,9 +4,9 @@
         <button class="menu-button" (click)="toggleMenu()">☰</button>
         <div class="submenu" [class.show]="isMenuOpen">
           <a routerLink="/home">About SayLah!✌🏼</a>
-          <a href="/edit">Edit</a>
-          <a href="/settings">Settings</a>
-          <a href="/home">Logout</a>
+          <a routerLink="/edit">Edit</a>
+          <a routerLink="/settings">Settings</a>
+          <a routerLink="/home">Logout</a>
         </div>
       </div>
       <div class="app-name">SayLah!✌🏼</div>
@@ -14,66 +14,33 @@
     <div class="main-content">
       <div class="scrollable-grid">
         <div class="grid-item">
-          <img src="assets/img/food.png" alt="Food" />
+          <img src="assets/img/food.png" alt="Food" (click)="readText('food')" />
           <div>Food</div>
         </div>
         <div class="grid-item">
-          <img src="assets/img/place.png" alt="Place" />
+          <img src="assets/img/place.png" alt="Place" (click)="readText('place')" />
           <div>Place</div>
         </div>
-        <div class="grid-item">
-          <img src="assets/img/play.png" alt="Play" />
+        <div class="grid-item" (click)="readText('play')" >
+          <img src="assets/img/play.png" alt="Play"/>
           <div>Play</div>
         </div>
-        <div class="grid-item">
-          <img src="assets/img/play.png" alt="Activity" />
-          <div>Activity</div>
+        <div class="grid-item" *ngFor="let card of cards" (click)="readText(card.name)" >
+          <img [src]="card.image" [alt]="card.name" />
+          <div>{{ card.name }}</div>
         </div>
-        <div class="grid-item">
-          <img src="assets/img/play.png" alt="Activity" />
-          <div>Activity</div>
-        </div>
-        <div class="grid-item">
-          <img src="assets/img/play.png" alt="Activity" />
-          <div>Activity</div>
-        </div>
-        <div class="grid-item">
-          <img src="assets/img/play.png" alt="Activity" />
-          <div>Activity</div>
-        </div>
-        <div class="grid-item">
-          <img src="assets/img/play.png" alt="Activity" />
-          <div>Activity</div>
-        </div>
-        <div class="grid-item">
-          <img src="assets/img/play.png" alt="Activity" />
-          <div>Activity</div>
-        </div>
-        <div class="grid-item">
-          <img src="assets/img/play.png" alt="Activity" />
-          <div>Activity</div>
-        </div>
-        <div class="grid-item">
-          <img src="assets/img/play.png" alt="Activity" />
-          <div>Activity</div>
-        </div>
-        <div class="grid-item">
-          <img src="assets/img/play.png" alt="Activity" />
-          <div>Activity</div>
-        </div>
-        <!-- Add more items as needed -->
       </div>
       <div class="actions">
-        <div class="action-item">
-          <img src="assets/img/yes.png" alt="Yes" />
+        <div class="action-item" (click)="readText('yes')" >
+          <img src="assets/img/yes.png" alt="Yes"/>
           <div>Yes</div>
         </div>
-        <div class="action-item">
-          <img src="assets/img/no.png" alt="No" />
+        <div class="action-item" (click)="readText('no')" >
+          <img src="assets/img/no.png" alt="No"/>
           <div>No</div>
         </div>
-        <div class="action-item">
-          <img src="assets/img/help.png" alt="Help" />
+        <div class="action-item" (click)="readText('help')" >
+          <img src="assets/img/help.png" alt="Help"/>
           <div>Help</div>
         </div>
       </div>
@@ -82,9 +49,9 @@
       <div class="menu-button">☰</div>
       <div class="submenu">
         <a routerLink="/home">About SayLah!✌🏼</a>
-        <a href="/edit">Edit</a>
-        <a href="/settings">Settings</a>
-        <a href="/home">Logout</a>
+        <a routerLink="/edit">Edit</a>
+        <a routerLink="/settings">Settings</a>
+        <a routerLink="/home">Logout</a>
       </div>
     </div>
   </div>

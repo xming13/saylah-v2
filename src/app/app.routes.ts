@@ -8,6 +8,7 @@ import { SavedInterfacesComponent } from './pages/saved-interfaces/saved-interfa
 import { TemplatesComponent } from './pages/templates/templates.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { EditPageComponent } from './pages/edit-page/edit-page.component';
 
 export const routes: Routes = [
    {
@@ -28,7 +29,7 @@ export const routes: Routes = [
    },
    {
       path: 'edit',
-      component: EditComponent
+      component: EditPageComponent
    },
    {
       path: 'login',
