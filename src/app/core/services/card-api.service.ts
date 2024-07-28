@@ -13,7 +13,7 @@ export class CardApiService {
   private client!: Client;
 
   constructor() {
-    this.client = generateClient();
+    this.client = generateClient<any>();
   }
 
   async getCurrentUser() {
