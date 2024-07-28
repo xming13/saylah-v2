@@ -3,6 +3,7 @@ import { Card } from '../../../API';
 import { CardApiService } from '../../core/services/card-api.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { EditCardAlertService } from '../../core/services/edit-card-alert.service';
 
 @Component({
   selector: 'app-edit',
@@ -20,7 +21,8 @@ export class EditComponent {
   isMenuOpen = false;
   cards: Card[] = [];
 
-  constructor(private cardsService: CardApiService) {}
+  constructor(private cardsService: CardApiService,
+    private popupService: EditCardAlertService) {}
 
   ngOnInit(): void {
     this.loadCards();
@@ -38,5 +40,9 @@ export class EditComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  openEditAlert(name: string, image: string|null|undefined) {
+    this.popupService.showAlert(name, image ?? '');
   }
 }
