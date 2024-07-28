@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { EditComponent } from './pages/edit/edit.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -8,11 +7,12 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { SavedInterfacesComponent } from './pages/saved-interfaces/saved-interfaces.component';
 import { TemplatesComponent } from './pages/templates/templates.component';
 import { LandingComponent } from './pages/landing/landing.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 export const routes: Routes = [
    {
       path: '',
-      component: HomeComponent
+      component: HomePageComponent
    },
    {
       path: 'home',
