@@ -9,11 +9,17 @@ import { TemplatesComponent } from './pages/templates/templates.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { EditPageComponent } from './pages/edit-page/edit-page.component';
+import { AuthPageComponent } from './pages/auth-page/auth-page.component';
+import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
    {
       path: '',
       component: HomePageComponent
+   },
+   {
+       path: 'auth',
+       component: AuthPageComponent
    },
    {
       path: 'home',
@@ -29,7 +35,8 @@ export const routes: Routes = [
    },
    {
       path: 'edit',
-      component: EditPageComponent
+      component: EditPageComponent,
+      canActivate: [ authGuard ]
    },
    {
       path: 'login',
@@ -37,15 +44,18 @@ export const routes: Routes = [
    },
    {
       path: 'settings',
-      component: SettingsComponent
+      component: SettingsComponent,
+      canActivate: [ authGuard ]
    },
    {
       path: 'saved-interfaces',
-      component: SavedInterfacesComponent
+      component: SavedInterfacesComponent,
+      canActivate: [ authGuard ]
    },
    {
       path: 'templates',
-      component: TemplatesComponent
+      component: TemplatesComponent,
+      canActivate: [ authGuard ]
    },
    { path: '', redirectTo: '', pathMatch: 'full' },
    { path: '**', redirectTo: '', pathMatch: 'full' }

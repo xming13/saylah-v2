@@ -6,7 +6,8 @@
           <a routerLink="/home">About SayLah!✌🏼</a>
           <a routerLink="/edit">Edit</a>
           <a routerLink="/settings">Settings</a>
-          <a routerLink="/home">Logout</a>
+          <a *ngIf="!isLoggedIn" routerLink="/auth">Login / Sign up</a>
+          <a *ngIf="isLoggedIn" (click)="onLogout()">Logout</a>
         </div>
       </div>
       <div class="app-name">SayLah!✌🏼</div>
@@ -50,8 +51,8 @@
       <div class="submenu">
         <a routerLink="/home">About SayLah!✌🏼</a>
         <a routerLink="/edit">Edit</a>
-        <a routerLink="/settings">Settings</a>
-        <a routerLink="/home">Logout</a>
+        <a *ngIf="!isLoggedIn" routerLink="/auth">Login / Sign up</a>
+        <a *ngIf="isLoggedIn" (click)="onLogout()">Logout</a>
       </div>
     </div>
   </div>
